@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	{% load static %}
+	<meta charset="UTF-8">
+	<title>Andres Rodriguez | Portfolio </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Onepage Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css'/>
+	<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />	    
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	
+	<link href="{% static 'hover/css/hover.css' %}" rel="stylesheet" media="all">
+			<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+				});
+			});
+		</script>
+	</head>	
+<body>
+
+
+{% for message in messages %}
+	{% if message.tags == "warning" %}
+	<div class="container-float" style='background-color:red'>
+		<div role="alert" style='text-align:center; padding: 1%;'>
+						<p><strong>{{ message }} </strong></p>
+					
+		</div>
+	</div>
+	{% else %}
+	<div class="container-float" style='background-color:green'>
+	<div role="alert" style='text-align:center; padding: 1%; text: strong'>
+			
+					<p><strong>{{ message }} </strong></p>
+		
+		</div>
+	</div>
+
+	{% endif %}
+{% endfor %}
+
+
+<div class="header" style="background-image: url({% static 'images/portada11.jpg' %})" no-repeat center top; id="head">	
+	
+
+      <div class="container"> 
+         <div class="header-top">
+      		 <div class="logo">
+			   <nav class="cl-effect-5">
+				{% comment %} <a href="/home/"><img src="{% static 'images/logo.png' %}" alt=""/></a> {% endcomment %}
+				<a class="animate__animated animate__heartBeat animate__repeat-2" href="" class='scroll'><span data-hover="ANDRES.R.">WHO I AM?</span></a>
+				</nav>
+			 </div>
+		   <div class="top-menu">
+		   	<span class="menu"> </span>
+			<ul>
+			 	<nav class="cl-effect-5 ">
+				<li><a class="active" href=""><span data-hover="Home">Inicio</span></a></li>
+				<li><a class="scroll" href="#about"><span data-hover="about me">Sobre mi</span></a></li>
+				<li><a class="scroll" href="#work"><span data-hover="my work"><span>Mis Trabajos</span></a></li>
+				{% comment %} <li><a href="#services" class="scroll"><span data-hover="services">services</span></a></li> {% endcomment %}
+				<li><a class="scroll" href="#contact"><span data-hover="contact">contacto</span></a></li>
+				
+				</nav>
+			 </ul>
+			 </div>
+			 <!--script-nav-->
+		 <script>
+		 $("span.menu").click(function(){
+		 $(".top-menu ul").slideToggle("slow" , function(){
+		 });
+		 });
+		 </script>
+			<div class="clearfix"></div>
+		 </div>  
+		  <div class="index-banner">
+       	   <div class="wmuSlider example1">
+			   <div class="wmuSliderWrapper">
+				   <article style="position: absolute; width: 100%; opacity: 0;"> 
+				   	<div class="banner-wrap">
+				   	       	<div class="banner_center">
+				   		 		<h1>Hola soy Andres Rodriguez,</h1> 
+				   		 		<h2>Soy <span>desarrollador web</span></h2>
+				   		 		<h2>de Argentina (CHACO)</h2>
+				   		 		</div>
+				   		 </div>
+					</article>
+				   <article style="position: relative; width: 100%; opacity: 1;"> 
+				   	   	<div class="banner-wrap">
+				   	      <div class="banner_center">
+				   		 		<h1>Hello, I'm Andres Rodriguez,</h1> 
+				   		 		<h2>I am <span>web developer</span></h2>
+				   		 		<h2>from Argentina (CHACO)</h2>
+				   		 		</div>
+				   		  </div>
+				   </article>
+				   <article style="position: absolute; width: 100%; opacity: 0;">
+				   	  	<div class="banner-wrap">
+				   	       <div class="banner_center">
+				   		 		<h1>THIS IS MY</h1> 
+				   		 		<h2><span>PORFOLIO</span></h2>
+				   		 		<h2>welcome</h2>
+				   		 		</div>
+				   		 </div>
+					 </article>
+				 </div>
+				
+            </div>
+            <script src="{% static 'js/jquery.wmuSlider.js' %}"></script> 
+			  <script>
+       			$('.example1').wmuSlider();         
+   		     </script> 	           	      
+      </div>
+	 </div>     
+	</div>
+	<div class="content">
+		<div class="about-section" id="about" id="about">
+	<div class="container">
+		<div class="about-header">
+			<h3><strong>Sobre mi / About me</strong></h3>
+			<div class="about-imag">
+			<div class="col-md-4 center hvr-grow-rotate">
+			{% comment %} <img src="{% static 'images/pic-9.jpg' %}" alt=""/> {% endcomment %}
+				<img src="{% static 'images/perfil1.png' %}" alt=""/>
+			{% comment %} <img class='animate__animated animate__fadeInLeftBig animate__delay-1s' src="{% static 'images/perfil.png' %}" alt=""/> {% endcomment %}
+			</div>
+			</div>
+			<div class="about-text">
+					<h5>No hace mucho di mis primeros pasos en este mundo, estoy aprendiendo de a poco por lo que estoy haciendo muchos cursos y estudio por mi cuenta. Inicialmente lo veía como un hobby y actualmente estoy buscando nuevos retos y aprendizajes.</h5> 
+				
+			</div>
+			<div class="clearfix"></div>
+			</div>
+			<div class="about-sectiongrids">
+				<div class="col-md-6 about-leftgrid">
+					<div class="polls">
+					<div class="poll">
+						<div class="poll-desc">
+							<h4>PYTHON</h4>
+						</div>
+						<div class="percentage">
+							<p>65%</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="skills">
+			              	<div style="width:65%"> </div>
+	                      </div>
+	                      </div>
+	                      <div class="polls">
+					<div class="poll">
+						<div class="poll-desc">
+							<h4>DJANGO</h4>
+						</div>
+						<div class="percentage">
+							<p>65%</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="skills">
+			              	<div style="width:65%"> </div>
+	                      </div>
+	                      </div>
+	                      <div class="polls">
+					<div class="poll">
+						<div class="poll-desc">
+							<h4>SQL</h4>
+						</div>
+						<div class="percentage">
+							<p>55%</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="skills">
+			              	<div style="width:55%"> </div>
+	                      </div>
+	                      </div>
+	                      <div class="polls">
+					<div class="poll">
+						<div class="poll-desc">
+							<h4>Html/Css</h4>
+						</div>
+						<div class="percentage">
+							<p>75%</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="skills">
+			              	<div style="width:75%"> </div>
+	                      </div>
+	                      </div>
+
+	</div>
+	<div class="col-md-6 about-rightgrid">
+		<div class="polls">
+					<div class="poll">
+						<div class="poll-desc">
+							<h4>web design</h4>
+						</div>
+						<div class="percentage">
+							<p>45%</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="skills">
+			              	<div style="width:45%"> </div>
+	                      </div>
+	                      </div>
+	                      <div class="polls">
+					<div class="poll">
+						<div class="poll-desc">
+							<h4>JAVASCRIPT</h4>
+						</div>
+						<div class="percentage">
+							<p>45%</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="skills">
+			              	<div style="width:45%"> </div>
+	                      </div>
+	                      </div>
+	                      <div class="polls">
+					<div class="poll">
+						<div class="poll-desc">
+							<h4>DESIGNER FLYER</h4>
+						</div>
+						<div class="percentage">
+							<p>75
+							%</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="skills">
+			              	<div style="width:75%"> </div>
+	                      </div>
+	                      </div>
+	                      <div class="polls">
+				<div class="poll">
+						<div class="poll-desc">
+							<h4>English</h4>	
+						</div>
+						<div class="percentage">
+							<p>40%</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="skills">
+			              	<div style="width:40%"> </div>
+	                      </div> 
+				</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="arrow1">
+	<a href="#work" class="scroll"><img src="{% static 'images/arrow1.png' %}" alt=""/></a>
+					</div>
+	</div>
+	</div>
+	<!-- about-section-ends -->
+
+	<div class="works-section" id="work" id="work">
+	   <div class="works-header">
+			<h3>Trabajos / works</h3>
+				<p>Les presento lo que fui desarrollando o practicando a medida que fui aprendiendo. </p>
+		</div>
+		<div class="portfolio-section-bottom-row" id="portfolio">
+			<div class="container">
+				
+						<script src="{% static 'js/easyResponsiveTabs.js' %}" type="text/javascript"></script>
+					<script type="text/javascript">
+						$(document).ready(function () {
+							$('#horizontalTab').easyResponsiveTabs({
+								type: 'default', //Types: default, vertical, accordion           
+								width: 'auto', //auto or any width like 600px
+								fit: true   // 100% fit in a container
+							});
+						});
+						
+					</script>
+						<link rel="stylesheet" href="{% static 'css/swipebox.css' %}">
+							<script src="{% static 'js/jquery.swipebox.min.js' %}"></script> 
+								<script type="text/javascript">
+									jQuery(function($) {
+										$(".swipebox").swipebox();
+									});
+								</script>
+					
+<div class="container">
+	<h5 style='color:#ef664d;'>Pagina web: </h5>
+	<div class="col-md-3 center hvr-rotate" style='margin: 1.5%'>
+		<a target="target_blank" href="http://androd.pythonanywhere.com/" Target="_blank"><img style='width: 122%;' src="{% static 'images/post1.png' %}"  alt=""/></a>
+	</div>
+	{% comment %} <div class="col-md-3 hvr-rotate" style='margin: 1.5%'>
+		<a href="http://androd.pythonanywhere.com/" Target="_blank"><img style='width: 122%' src="{% static 'images/pic-3.jpg' %}" alt=""/></a>
+	</div>
+	<div class="col-md-3 hvr-rotate" style='margin: 1.5%'>
+		<a href="http://androd.pythonanywhere.com/" Target="_blank"><img style='width: 122%' src="{% static 'images/pic-2.jpg' %}" alt=""/></a>
+	</div> {% endcomment %}
+</div>
+
+<div class="container">
+	<h5 style='color:#ef664d;'>Flayers: </h5>
+	
+	<div class="col-md-3 img-top grid_box" style='margin: 1.5%'>
+	<a style='img-responsive' href="{% static 'images/pic-10.png' %}" class="swipebox"  title="Flayer para Wealth Ocean"> <img src="{% static 'images/pic-10.png' %}" style='img-responsive' alt=""> <span class="zoom-icon"></span></a>
+		
+	{% comment %} </div>
+		<div class="col-md-3 hvr-rotate" style='margin: 1.5%'>
+			<video width='100%'  preload="auto" loop="" autoplay='' muted="muted"> 
+			<source src="{% static 'images/pic-12.mp4' %}" type="video/mp4 ">
+			</video>
+
+	</div> {% endcomment %}
+	</div>
+		<div class="col-md-3 hvr-rotate" style='margin: 1.5%'>
+			
+			<iframe width="200" height="450" src="https://www.youtube.com/embed/X4iIAbBxDYg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			
+
+	</div>
+</div>
+
+
+
+{% comment %} <div class="container">
+	<div class="col-md-3 center hvr-float">
+		<a href="http://androd.pythonanywhere.com/" Target="_blank"><img src="{% static 'images/post1.png' %}" alt=""/></a>
+	</div>
+	<div class="col-md-3 hvr-float">
+		<a href="http://androd.pythonanywhere.com/" Target="_blank"><img src="{% static 'images/pic-3.jpg' %}" alt=""/></a>
+	</div>
+	<div class="col-md-3 hvr-float">
+		<a href="http://androd.pythonanywhere.com/" Target="_blank"><img src="{% static 'images/pic-2.jpg' %}" alt=""/></a>
+	</div>
+</div> {% endcomment %}
+
+
+						
+							<!-- Portfolio Ends Here -->
+
+							{% comment %}  
+						 <div class="sap_tabs">
+							<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+								  <ul class="resp-tabs-list">
+									  <li class="resp-tab-item" aria-controls="tab_item-0" role="tab"><span>All</span></li>
+									  <li class="resp-tab-item" aria-controls="tab_item-1" role="tab"><span>Branding</span></li>
+									  <li class="resp-tab-item" aria-controls="tab_item-2" role="tab"><span>Print</span></li>
+									  <li class="resp-tab-item" aria-controls="tab_item-3" role="tab"><span>Web design</span></li>
+									  <li class="resp-tab-item" aria-controls="tab_item-4" role="tab"><span>Photography</span></li>
+									  <div class="clearfix"></div>
+								  </ul>	
+								<div id="portfoliolist">
+									<div class="resp-tabs-container">
+										<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-0">
+											<div class="tab_img">
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-1.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-1.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static '/images/pic-2.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-2.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-3.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-3.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-4.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-4.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-5.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-5.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-6.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-6.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-7.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-7.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-8.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-8.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="clearfix"></div>	
+											</div>
+																				 
+										</div>
+										<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-1">
+											<div class="tab_img">
+												<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-5.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-5.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-6.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-6.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-7.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-7.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-8.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-8.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													
+													<div class="clearfix"></div>	
+											</div>	 	        					 
+										</div>
+										<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-2">
+											
+											<div class="tab_img">
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-2.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-2.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-3.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-3.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-4.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-4.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													
+														<div class="clearfix"></div>
+											</div>		        					 
+										</div>
+										<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-3">
+											<div class="tab_img">
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-1.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-1.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-2.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-2.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													
+														<div class="clearfix"></div>
+											</div>	
+										</div>
+										<div class="tab-1 resp-tab-content" aria-labelledby="tab_item-4">
+											<div class="tab_img">
+													<div class="col-md-3 img-top grid_box">
+														<a href="{% static 'images/pic-1.jpg' %}" class="swipebox"  title="Image Title">
+															  <img src="{% static 'images/pic-1.jpg' %}" class="img-responsive" alt="">
+															  <span class="zoom-icon"></span> 
+														</a>
+													</div>
+													
+														<div class="clearfix"></div>
+											</div>	
+										</div>										
+									</div>	
+								</div>
+							</div>
+						</div>				
+ 
+							{% endcomment %}
+				<div class="arrow">
+					<a href="#contact" class="scroll"><img src="{% static 'images/arrow.png' %}" alt=""/></a>
+				</div>
+			</div> 
+		</div>
+	</div>
+	<!-- portfolio-section-ends -->
+	{% comment %} <div class="services-section" id="services">
+			<div class="container"> 
+			<div class="services-header">
+				<h3>services</h3>
+					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. </p>
+			</div>
+			<div class="services-sectiongrids">
+				<div class="col-md-4 services-grid">
+					<img src="{% static 'images/img1.png' %}" alt=""/>
+					<h4>webdesign</h4>
+					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+				</div>
+				<div class="col-md-4 services-grid">
+					<img src="{% static 'images/img2.png' %}" alt=""/>
+					<h4>print design</h4>
+					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+				</div>
+				<div class="col-md-4 services-grid">
+					<img src="{% static 'images/img3.png' %}" alt=""/>
+					<h4>web development</h4>
+					<p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.</p>
+				</div>
+				<div class="clearfix"></div>
+				<div class="arrow1">
+					<a href="#contact" class="scroll"><img src="{% static 'images/arrow1.png' %}" alt=""/></a>
+					</div>
+		</div>
+		</div>
+		</div> {% endcomment %}
+		<!-- services-section-ends -->
+	</div>
+	<div class="footer-section" id="contact" id="contact" style='background-color:white;'>
+			<div class="container"> 
+			<div class="contact-header">
+				<h3 > contacto / Contact </h3>
+					<p style='color:#2a404e;'>Ante cualquier consulta, por favor escribime por esté medio. </p>
+			</div>
+			<div class="social-icon">
+				{% comment %} <a href="#" target='_blank'><img class='hvr-float' style='padding: 0% 1%' src="{% static 'images/icon-face.png' %}"></a> {% endcomment %}
+				<a href="https://wa.me/543795170088?text=Hola%20Andres,%20quiero%20ponerme%20en%20contacto%20con%20vos" target='_blank'><img class='hvr-float' style='padding: 0% 1%' src="{% static 'images/icon-whatsapp.png' %}" ></a>
+				<a href="https://github.com/AndrRod" target='_blank'><img class='hvr-float' style='padding: 0% 1%' src="{% static 'images/icon-github.png' %}" ></a>
+				<a href="https://www.linkedin.com/in/andres-rodriguez-60a166208/" target='_blank'><img class='hvr-float' style='padding: 0% 1%' src="{% static 'images/icon-likedin.png' %}" ></a>
+				<a href="https://www.youtube.com/channel/UCuW3NDYgGGLG9wGJsweU6eQ" target='_blank'><img class='hvr-float' style='padding: 0% 1%' src="{% static 'images/icon-youtube.png' %}" ></a>
+				
+				{% comment %} <a href="#"><i class="icon1"></i></a>
+				<a href="#"><i class="icon2"></i></a>
+				<a href="#"><i class="icon3"></i></a>
+				<a href="#"><i class="icon4"></i></a>
+				<a href="#"><i class="icon5"></i></a>
+				<a href="#"><i class="icon6"></i></a>
+				<a href="#"><i class="icon7"></i></a>
+				<a href="#"><i class="icon8"></i></a> {% endcomment %}
+			</div>
+			<div class="contact">
+				{% comment %} <form>
+					<div class="col-md-4 contactgrid">
+						<input type="text" class="text" value=" name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = ' name';}">
+					</div>
+					<div class="col-md-4 contactgrid">
+						<input type="text" class="text" value="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'email';}">
+					</div>
+					<div class="col-md-4 contactgrid">
+						<input type="text" class="text" value="phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'phone';}">
+					</div>
+					<div class="col-md-8 contactgrid1">
+						<textarea onfocus="if(this.value == 'Your Message') this.value='';" onblur="if(this.value == '') this.value='Your Message';" >Escribe tu mensaje</textarea>
+					</div>
+					<div class="col-md-4 contactgrid2" style='background-color: white'>
+						<input type="submit" value="Enviar Mensaje">
+					</div>
+				   <div class="clearfix"></div>
+				</form> {% endcomment %}
+
+
+				{% comment %} <form method='POST'>{% csrf_token %}
+						<div class="col-md-4 contactgrid">
+							<input type="text" class="text" value="nombre" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nombre';}"  {{form.nombre}}{% csrf_token %}
+							
+						</div>
+						<div class="col-md-4 contactgrid">
+							<input type="text" class="text" value="asunto" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Asunto';}" {{form.asunto}}{% csrf_token %}
+							
+						</div>
+						<div class="col-md-4 contactgrid">
+							<input type="text" class="text" value="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'email';}" {{form.email}} {% csrf_token %}
+							
+						</div>
+					
+					
+						<div class="col-md-8 contactgrid1">
+							
+						<textarea onfocus="if(this.value == 'mensaje') this.value='';" onblur="if(this.value == '') this.value='mensaje';" {{form.mensaje}} {% csrf_token %} </textarea>
+						 
+
+
+						</div>
+
+						<div class="col-md-1 contactgrid" > 
+
+						{% csrf_token %}
+
+							<input class='btn btn-outline-primary'style="width: 150px;" type="submit" value="Enviar">
+						</div>
+					<div class="clearfix"></div>
+				</form> 
+
+ 			 {% endcomment %}
+
+						
+
+
+
+				
+
+			 		<form class='m-3 p-3 fa' action="" method="POST" style="text-align: center;">
+					{% csrf_token %}
+					{% for f in form %}
+					{% if f.label == 'Mensaje' %}
+					<div class="col-md-8 contactgrid">
+						<input type="text" class="text" style='color: #2a404e'   value="{{f.label.lower}}" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '{{f.label.lower}}';}"  {{f}}
+					{% else %}
+					<div class="col-md-4 contactgrid">
+							<input type="text"  class="text" style='color: #2a404e' value="{{f.label.lower}}" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '{{f.label.lower}}';}"  {{f}}
+					{% endif %}
+							
+							
+					</div>
+
+					{% endfor %}
+	
+					<input class='btn hvr-pulse-shrink' style="width: 150px; background-color: #2a404e; color: white" type="submit" value="Enviar">
+				
+    				</div>
+				</form> 
+
+     
+
+
+			</div>
+			<div class="footer-bottom">
+
+					<p style='color:#2a404e;'>&copy; 2021. All rights Reserved | Visita mis aportes en <a href="https://github.com/AndrRod" target="target_blank">Git Hub</a></p>
+
+					</div>
+					<script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</div>
+
+		</div>		
+	</div>
+	
+	
+</body>
+</html>
