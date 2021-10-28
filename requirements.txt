@@ -8,3 +8,5 @@ gunicorn==0.14.2
 requests==0.11.1
 Python==3.9.7
 django
+whitenoise
+psycopg2==2.6.2
