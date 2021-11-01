@@ -203,7 +203,7 @@ EMAIL_USE_TLS=True
 EMAIL_PORT=587
 #Es el puerto de gmail
 EMAIL_HOST_USER="rodrigueza.federacion@gmail.com"
-EMAIL_HOST_PASSWORD="Lgante1986"
+EMAIL_HOST_PASSWORD="Cucaracha09"
 
 
 # 1/11
