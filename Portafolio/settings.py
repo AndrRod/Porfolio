@@ -159,10 +159,11 @@ from pathlib import Path
 from whitenoise import WhiteNoise
 
 # from whitenoise.django import DjangoWhiteNoise
-
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -378,6 +379,7 @@ EMAIL_PORT=587
 EMAIL_HOST_USER="rodrigueza.federacion@gmail.com"
 EMAIL_HOST_PASSWORD="Lgante1986"
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root', 'static')
 STATIC_URL = "/static/"
 STATIC_DIR = (os.path.join(BASE_DIR, "static"),)
