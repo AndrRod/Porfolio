@@ -15,8 +15,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Portafolio.settings')
 
 # application = get_wsgi_application()  
 
-from whitenoise.Django import DjangoWhiteNoise
-
-
 application = get_wsgi_application()
-application = DjangoWhiteNoise(application)
+
+from whitenoise import WhiteNoise  
+application = WhiteNoise(application)
