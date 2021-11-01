@@ -212,7 +212,7 @@ SERVER_EMAIL = EMAIL_HOST_USER
 
 
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, '/app/staticfiles')
 
-STATIC_URL = "/static"
+STATIC_URL = "/static/"
 STATIC_DIR = (os.path.join(BASE_DIR, "/static"),)
