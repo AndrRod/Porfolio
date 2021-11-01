@@ -337,7 +337,7 @@ django_heroku.settings(locals())
 STATIC_DIR = (os.path.join(BASE_DIR, "static"),)
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = "/static/"
+STATIC_URL = "/static"
 
 
 #31/10 DJANGO NO SOPORTA ARCHIVOS STATICOS EN PRODUCCION 
