@@ -202,6 +202,10 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+# 1/11
+ADMINS = (('username', 'user@domain.com'),)
+MANAGERS = ADMINSEMAIL_HOST = 'host'
+SEND_BROKEN_LINK_EMAILS=True
 
 EMAIL_BACKEND='django.core.mail.backends.smtp.EmailBackend'
 
@@ -216,6 +220,13 @@ EMAIL_PORT=587
 #Es el puerto de gmail
 EMAIL_HOST_USER="rodrigueza.federacion@gmail.com"
 EMAIL_HOST_PASSWORD="Lgante1986"
+
+
+# 1/11
+SERVER_EMAIL = 'django@my-domain.com'
+SERVER_EMAIL = EMAIL_HOST_USER
+
+
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
