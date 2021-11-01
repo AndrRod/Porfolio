@@ -145,16 +145,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# STATIC_URL = '/static/'
-
-# Extra places for collectstatic to find static files.
-# STATICFILES_DIRS = (
-#     os.path.join(BASE_DIR, 'static'),
-# )
-    
+   
 
 import os
 import django_heroku
@@ -164,24 +155,18 @@ import django_heroku
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 django_heroku.settings(locals())   
     
     
-    
-# STATIC_URL = '/static/'
-
-
-
-
 
 #31/10 DJANGO NO SOPORTA ARCHIVOS STATICOS EN PRODUCCION 
 
 STATICFILES_DIRES = (os.path.join(BASE_DIR, 'static'),)
 # STATICFILES_DIRES = [
-#     BASE_DIR / 'static',
+#     BASE_DIR 'static',
 #     BASE_DIR / 'Portafolio' /'static',
 #     BASE_DIR / 'Portafolio' / 'Portafolio' /'static',
 #     BASE_DIR / 'app' / 'static', 
@@ -229,5 +214,5 @@ SERVER_EMAIL = EMAIL_HOST_USER
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_URL = "static/"
+STATIC_URL = "static"
 STATIC_DIR = (os.path.join(BASE_DIR, "static"),)
