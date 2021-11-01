@@ -334,10 +334,7 @@ django_heroku.settings(locals())
 # STATIC_URL = '/static/'
 
 
-STATIC_URL = "static"
-STATIC_DIR = (os.path.join(BASE_DIR, "static"),)
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 #31/10 DJANGO NO SOPORTA ARCHIVOS STATICOS EN PRODUCCION 
@@ -381,3 +378,6 @@ EMAIL_PORT=587
 EMAIL_HOST_USER="rodrigueza.federacion@gmail.com"
 EMAIL_HOST_PASSWORD="Lgante1986"
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = "static"
+STATIC_DIR = (os.path.join(BASE_DIR, "static"),)
