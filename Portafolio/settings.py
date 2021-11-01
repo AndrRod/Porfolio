@@ -197,6 +197,7 @@ EMAIL_HOST="smtp.gmail.com" #HAY QUE ESPECIFICAR EL HOST: parametros de gmail en
 # deshabilitar Acceso de aplicaciones poco seguras, porque gmail viene por defecto la prohibición de terceros (Acceso de aplicaciones poco seguras)
 
 EMAIL_USE_TLS=True
+EMAIL_USE_SSL=False
 #especificar protocolos para enviar el correo o parametros
 
 EMAIL_PORT=587
