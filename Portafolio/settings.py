@@ -38,8 +38,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
-    'whitenoise.storage.CompressedManifestStaticFilesStorage',
+    'whitenoise.middleware.WhiteNoiseMiddleware',    
 #     'whitenoise.middleware.WhiteNoiseMiddleware', # add this line
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -48,10 +47,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 #     AGREGAMOS WHITENOSE PARA HEROKU
-#     'whitenoise.storage.CompressedManifestStaticFilesStorage',
-#     whitenoise.django.GzipManifestStaticFilesStorage
-#     'Django.middleware.security.SecurityMiddleware',    
-    #Other middleware...
+
 ]
 
 MIDDLEWARE_CLASSES = (
@@ -195,9 +191,7 @@ STATICFILES_DIRES = (os.path.join(BASE_DIR, 'static'),)
 # ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# STATICFILES_STORAGE = 'whitenoise.Django.GzipManifestStaticFilesStorage'
-# "whitenoise.storage.CompressedManifestStaticFilesStorage" 
-# 'whitenoise.Django.GzipManifestStaticFilesStorage'
+
 
 
 
