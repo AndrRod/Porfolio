@@ -203,7 +203,7 @@ EMAIL_USE_SSL=False
 EMAIL_PORT=587
 #Es el puerto de gmail
 EMAIL_HOST_USER="rodrigueza.federacion@gmail.com"
-EMAIL_HOST_PASSWORD="Cucaracha09"
+EMAIL_HOST_PASSWORD="cfervkbazwcdaglr"
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
