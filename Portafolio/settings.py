@@ -249,10 +249,10 @@ TEMPLATES = [
 
 
 # 31/10
-import dj_databatse_url
+import dj_database_url
 from decouple import config
 DATABASES = {
-    'default': dj_databatse_url.config(
+    'default': dj_database_url.config(
         default=config('DATABASE_URL')
     )
 
