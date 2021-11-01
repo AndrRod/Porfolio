@@ -1,2 +1,2 @@
-web: gunicorn Portafolio.wsgi --log-file -
+web: gunicorn wsgi:Portafolio --log-file -
     
