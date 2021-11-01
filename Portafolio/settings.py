@@ -378,6 +378,6 @@ EMAIL_PORT=587
 EMAIL_HOST_USER="rodrigueza.federacion@gmail.com"
 EMAIL_HOST_PASSWORD="Lgante1986"
 
-STATIC_ROOT = os.path.join(BASE_DIR, '/app/staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static/"
 STATIC_DIR = (os.path.join(BASE_DIR, "static"),)
