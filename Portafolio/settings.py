@@ -158,12 +158,13 @@ EMAIL_HOST_PASSWORD="Lgante1986"
 from pathlib import Path
 from whitenoise import WhiteNoise
 
+
 # from whitenoise.django import DjangoWhiteNoise
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -320,7 +321,7 @@ USE_TZ = True
 import os
 import django_heroku
 
-SECRET_KEY = "es_un_secreto"
+# SECRET_KEY = "es_un_secreto"
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -380,6 +381,6 @@ EMAIL_HOST_USER="rodrigueza.federacion@gmail.com"
 EMAIL_HOST_PASSWORD="Lgante1986"
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_ROOT = os.path.join(BASE_DIR, 'static_root', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = "/static/"
 STATIC_DIR = (os.path.join(BASE_DIR, "static"),)
