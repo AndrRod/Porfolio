@@ -221,7 +221,7 @@ import os
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'Portafolio/templates')],
+        'DIRS': [os.path.join(BASE_DIR, '/andresporfolio/Portafolio/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -379,5 +379,5 @@ EMAIL_HOST_USER="rodrigueza.federacion@gmail.com"
 EMAIL_HOST_PASSWORD="Lgante1986"
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = "static"
+STATIC_URL = "/static/"
 STATIC_DIR = (os.path.join(BASE_DIR, "static"),)
