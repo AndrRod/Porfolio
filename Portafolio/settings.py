@@ -156,7 +156,8 @@ EMAIL_HOST_PASSWORD="Lgante1986"
 
 
 from pathlib import Path
-from whitenoise.django import DjangoWhiteNoise
+from white
+# from whitenoise.django import DjangoWhiteNoise
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
