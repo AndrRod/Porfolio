@@ -158,6 +158,7 @@ EMAIL_HOST_PASSWORD="Lgante1986"
 from pathlib import Path
 from whitenoise.django import DjangoWhiteNoise
 
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -171,7 +172,7 @@ SECRET_KEY = 'django-insecure-g1okie^%-_gzb#idh#gxlw*wpy^9_nxbj=s-twzvyu5#4%i2u2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -188,7 +189,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.storage.CompressedManifestStaticFilesStorage',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.storage.CompressedManifestStaticFilesStorage',
 #     'whitenoise.middleware.WhiteNoiseMiddleware', # add this line
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -242,16 +244,25 @@ TEMPLATES = [
 # }
 
 
+# 31/10
+import dj_databatse_url
+from decouple import config
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Aca agregamos postgresql
-        # 'NAME': 'MultipleChoice',
-        'USER': 'postgres',
-        'PASSWORD': 'Lgante03',
-        'HOST': '127.0.0.1',
-        'DATABASE_PORT': '5432',
-    }
+    'default': dj_databatse_url.config(
+        default=config('DATABASE_URL')
+    )
+
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2', # Aca agregamos postgresql
+#         # 'NAME': 'MultipleChoice',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Lgante03',
+#         'HOST': '127.0.0.1',
+#         'DATABASE_PORT': '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -311,7 +322,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATIC_URL = "/static/"
 
 django_heroku.settings(locals())   
     
@@ -323,8 +333,12 @@ django_heroku.settings(locals())
 STATIC_DIR = (os.path.join(BASE_DIR, "static"),)
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = "/static/"
 
 
+#31/10 DJANGO NO SOPORTA ARCHIVOS STATICOS EN PRODUCCION 
+
+STATICFILES_DIRES = (os.path.join(BASE_DIR, 'static'),)
 # STATICFILES_DIRES = [
 #     BASE_DIR / 'static',
 #     BASE_DIR / 'Portafolio' /'static',
@@ -334,7 +348,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     
 # ]
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # STATICFILES_STORAGE = 'whitenoise.Django.GzipManifestStaticFilesStorage'
 # "whitenoise.storage.CompressedManifestStaticFilesStorage" 
 # 'whitenoise.Django.GzipManifestStaticFilesStorage'
