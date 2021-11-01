@@ -206,12 +206,6 @@ EMAIL_HOST_USER="rodrigueza.federacion@gmail.com"
 EMAIL_HOST_PASSWORD="Cucaracha09"
 
 
-if DEBUG:
-    EMAIL_BACKEND = "naomi.mail.backends.naomi.NaomiBackend"
-    EMAIL_FILE_PATH = "C:\Users\ANA Y ANDRES\Desktop\mail\tmp"
-
-
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATIC_URL = "/static/"
