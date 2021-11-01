@@ -156,8 +156,8 @@ EMAIL_HOST_PASSWORD="Lgante1986"
 
 
 from pathlib import Path
-# from whitenoise import WhiteNoise
-from whitenoise import DjangoWhiteNoise
+from whitenoise import WhiteNoise
+
 
 
 import os
