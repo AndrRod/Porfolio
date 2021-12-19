@@ -146,16 +146,18 @@ nav a:focus {
 	text-align: center;
 
 }
+/* font-family: 'Arvo', serif; */
 .banner_center h1 {
 	color: #eee;
-	/* font-family: 'Arvo', serif; */
+	
 	font-family: 'Bebas Neue', cursive;
 	text-transform: uppercase;
 	font-size: 2.4em;
 }
+	/* font-family: 'Arvo', serif; */
 .banner_center h2 {
 	color: #eee;
-	/* font-family: 'Arvo', serif; */
+
 	font-family: 'Bebas Neue', cursive;
 	text-transform: uppercase;
 	font-size: 2.4em;
@@ -208,10 +210,12 @@ ul.wmuSliderPagination {
 	margin: 0 auto;
 
 }
+
+	/* font-family: 'Arvo', serif; */
 .services-header h3
 {
 	font-size: 2.5em;
-	/* font-family: 'Arvo', serif; */
+
 	font-family: 'Bebas Neue', cursive;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -255,10 +259,11 @@ ul.wmuSliderPagination {
 	width: 85%;
 	margin: 0 auto;
 }
+/* font-family: 'Arvo', serif; */
 .works-header h3
 {
 	font-size: 2.5em;
-	/* font-family: 'Arvo', serif; */
+	
 	font-family: 'Bebas Neue', cursive;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -632,9 +637,10 @@ h2.resp-accordion {
 .about-header {
 	text-align: center;
 }
+/* font-family: 'Arvo', serif; */
 .about-header h3 {
 	font-size: 2.5em;
-	/* font-family: 'Arvo', serif; */
+	
 	font-family: 'Bebas Neue', cursive;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -707,9 +713,10 @@ h2.resp-accordion {
 	width: 85%;
 	margin: 0 auto;
 }
+	/* font-family: 'Arvo', serif; */
 .contact-header h3 {
 	font-size: 2.5em;
-	/* font-family: 'Arvo', serif; */
+
 	font-family: 'Bebas Neue', cursive;
 	text-transform: uppercase;
 	font-weight: 400;
