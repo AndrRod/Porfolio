@@ -260,7 +260,8 @@ ul.wmuSliderPagination {
 .works-header h3
 {
 	font-size: 2.5em;
-	font-family: 'Arvo', serif;
+	/* font-family: 'Arvo', serif; */
+	font-family: 'Bebas Neue', cursive;
 	text-transform: uppercase;
 	font-weight: 400;
 	color: #ef664d;
@@ -635,7 +636,8 @@ h2.resp-accordion {
 }
 .about-header h3 {
 	font-size: 2.5em;
-	font-family: 'Arvo', serif;
+	/* font-family: 'Arvo', serif; */
+	font-family: 'Bebas Neue', cursive;
 	text-transform: uppercase;
 	font-weight: 400;
 	color: #2a404e;
@@ -709,7 +711,8 @@ h2.resp-accordion {
 }
 .contact-header h3 {
 	font-size: 2.5em;
-	font-family: 'Arvo', serif;
+	/* font-family: 'Arvo', serif; */
+	font-family: 'Bebas Neue', cursive;
 	text-transform: uppercase;
 	font-weight: 400;
 	color: #ef664d;
