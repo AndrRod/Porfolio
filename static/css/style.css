@@ -248,6 +248,7 @@ ul.wmuSliderPagination {
 .arrow1 {
 	padding-top: 30px;
 	text-align: center;
+	background-color: #e6e6e6;
 }
 .works-section{
 	padding:3em 0;
@@ -1056,6 +1057,7 @@ padding-bottom: 2em;
 			.arrow1 {
 				padding-top: 0px;
 				background-color: #e6e6e6;
+				
 			}
 			.contact-section {
 				padding: 2em 0;
