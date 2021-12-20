@@ -251,9 +251,10 @@ ul.wmuSliderPagination {
 }
 .works-section{
 	padding:3em 0;
-	background:#2e3e4e;
+	background-color: #262626;	
 	
 }
+/* background:#2e3e4e; */
 .works-header{
 	text-align: center;
 	width: 85%;
@@ -697,8 +698,10 @@ h2.resp-accordion {
 	width: 100%;
 	margin: 5px 0;
 	height: 14px;
-	background:#dedede;
+	background-color: #cccccc;
+	
 }
+/* background:#dedede; */
 .skills > div {
 	height: 100%;
 	display: block;
